@@ -4,7 +4,7 @@ pysettrie
 
 https://github.com/GregoryMorse/pysettrie
 
-pysettrie is a python3 package that provides support for efficient storage and querying of sets of sets 
+pysettrie is an efficient Cython python3 package that provides support for efficient storage and querying of sets of sets 
 using the trie data structure, supporting operations like finding all the supersets/subsets of a given set 
 from a collection of sets.
 The original motivation for this module was to provide efficient search for supersets of sets of feature-value pairs in our natural language parser project (e.g. matching nouns against verb argument positions).
@@ -41,6 +41,8 @@ See also:
 - http://stackoverflow.com/questions/1263524/superset-search?rq=1
 
 Changes:
+* Version 1.0.2:
+  - Continuous integration, remove unnecessary files, improve build requirements
 * Version 1.0.0:
   - Some bug fixes, complete Cython translation for improved performance.
 * Version 0.1.3:

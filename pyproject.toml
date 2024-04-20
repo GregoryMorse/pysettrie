@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel", "Cython"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "pysettrie"
-version = "1.0.1"
+version = "1.0.2"
 authors = [
   { name="Gregory Morse", email="gregory.morse@live.com" },
   { name="Márton Miháltz", email="mihaltz.marton@nytud.mta.hu" }
