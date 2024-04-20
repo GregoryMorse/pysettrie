@@ -1,8 +1,8 @@
 pysettrie
 =========
-[![Build Status](https://travis-ci.org/mmihaltz/pysettrie.svg)](https://travis-ci.org/mmihaltz/pysettrie)
+[![Build Status](https://travis-ci.org/GregoryMorse/pysettrie.svg)](https://travis-ci.org/GregoryMorse/pysettrie)
 
-https://github.com/mmihaltz/pysettrie
+https://github.com/GregoryMorse/pysettrie
 
 pysettrie is a python3 package that provides support for efficient storage and querying of sets of sets 
 using the trie data structure, supporting operations like finding all the supersets/subsets of a given set 
@@ -18,14 +18,10 @@ For further information, please see [documentation](docs/build/html/index.html)
 
 Module test_settrie.py contains unittests for all the containers.
 
-Author: Márton Miháltz 
+Authors: Gregory Morse and Márton Miháltz 
 [https://sites.google.com/site/mmihaltz/](https://sites.google.com/site/mmihaltz/)
 
-This package depends on the [sortedcollection](http://grantjenks.com/docs/sortedcontainers/) module.
 One recommended way to install (tested on Ubuntu):
-```
-sudo pip3 install sortedcontainers
-```
 If you don't have pip3:
 ```
 sudo apt-get install python3-setuptools
@@ -45,6 +41,8 @@ See also:
 - http://stackoverflow.com/questions/1263524/superset-search?rq=1
 
 Changes:
+* Version 1.0.0:
+  - Some bug fixes, complete Cython translation for improved performance.
 * Version 0.1.3:
   - SetTrieMultiMap.assign() returns number of values associated to key after assignment.
 
