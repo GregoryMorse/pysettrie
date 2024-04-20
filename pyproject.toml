@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pysettrie"
+version = "1.0.0"
+authors = [
+  { name="Gregory Morse", email="gregory.morse@live.com" },
+  { name="Márton Miháltz", email="mihaltz.marton@nytud.mta.hu" }
+]
+description = "pysettrie package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/GregoryMorse/pysettrie"
+Issues = "https://github.com/GregoryMorse/pysettrie/issues"
