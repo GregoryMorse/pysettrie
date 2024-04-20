@@ -29,7 +29,7 @@ setup(
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Information Analysis'],
     ext_modules = cythonize([
-        Extension("settrie", ["settrie/settrie.pyx"], language="c++", extra_compile_args=["-std=c++11"])],
+        Extension("settrie", ["settrie/settrie.pyx"], language="c++", extra_compile_args=["-std=c++14"])],
         language_level=3
     ), #"settrie.pyx")
     package_data = {
