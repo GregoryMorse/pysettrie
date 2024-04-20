@@ -184,25 +184,13 @@ class TestSetTrie(unittest.TestCase):
         list(t.itersupersets(n))
         t.hassuperset(n)
         
-class TestSetTrieGenerator(TestSetTrie):
-  def setUp(self):
-    self.t = SetTrie([{1, 3}, {1, 3, 5}, {1, 4}, {1, 2, 4}, {2, 4}, {2, 3, 5}], generator=True)
-
 class TestSetTrieRecursion(TestSetTrie):
   def setUp(self):
     self.t = SetTrie([{1, 3}, {1, 3, 5}, {1, 4}, {1, 2, 4}, {2, 4}, {2, 3, 5}], recursion=True)
 
-class TestSetTrieRecursionGen(TestSetTrie):
-  def setUp(self):
-    self.t = SetTrie([{1, 3}, {1, 3, 5}, {1, 4}, {1, 2, 4}, {2, 4}, {2, 3, 5}], recursion=True, generator=True)
-
 class TestSetTrieItemStack(TestSetTrie):
   def setUp(self):
     self.t = SetTrie([{1, 3}, {1, 3, 5}, {1, 4}, {1, 2, 4}, {2, 4}, {2, 3, 5}], recursion=None)
-
-class TestSetTrieItemStackGen(TestSetTrie):
-  def setUp(self):
-    self.t = SetTrie([{1, 3}, {1, 3, 5}, {1, 4}, {1, 2, 4}, {2, 4}, {2, 3, 5}], recursion=None, generator=True)
 
 class TestSetTrieMap(unittest.TestCase):
     """
@@ -325,11 +313,6 @@ class TestSetTrieMap(unittest.TestCase):
         self.assertEqual(list(self.t.values()), ['D', 'A', 'B', 'C', 'F', 'E'])
         self.assertEqual(list(self.t.__iter__()), list(self.t.keys()))
 
-class TestSetTrieMapGenerator(TestSetTrieMap):
-  def setUp(self):
-    self.t = SetTrieMap([({1, 3}, 'A'), ({1, 3, 5}, 'B'), ({1, 4}, 'C'),
-                         ({1, 2, 4}, 'D'), ({2, 4}, 'E'), ({2, 3, 5}, 'F')], generator=True)
-
 class TestSetTrieMultiMap(unittest.TestCase):
     """
     UnitTest for SetTrieMultiMap class
@@ -436,12 +419,6 @@ class TestSetTrieMultiMap(unittest.TestCase):
         self.assertEqual(self.t.subsets({2, 3, 4, 5}), [({2, 3, 5}, 'F'), ({2, 3, 5}, 'FF'), ({2, 3, 5}, 'FFF'),
                                                         ({2, 4}, 'E')])
         self.assertEqual(self.t.subsets({2, 3, 5, 6}), [({2, 3, 5}, 'F'), ({2, 3, 5}, 'FF'), ({2, 3, 5}, 'FFF')])
-
-class TestSetTrieMultiMapGenerator(TestSetTrieMultiMap):
-  def setUp(self):
-    self.t = SetTrieMultiMap([({1, 3}, 'A'), ({1, 3}, 'AA'), ({1, 3, 5}, 'B'), ({1, 4}, 'C'), ({1, 4}, 'CC'),
-                              ({1, 2, 4}, 'D'), ({1, 2, 4}, 'DD'), ({2, 4}, 'E'), ({2, 3, 5}, 'F'),
-                              ({2, 3, 5}, 'FF'), ({2, 3, 5}, 'FFF')], generator=True)
 
     # - - - - - - -
 
