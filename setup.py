@@ -10,7 +10,7 @@ from Cython.Build import cythonize
 setup(
     name='pysettrie',
     url='https://github.com/GregoryMorse/pysettrie',
-    version='1.0.0',
+    version='1.0.1',
     author='Gregory Morse and Márton Miháltz',
     description='Efficient storage and querying of sets of sets using the trie data structure',
     packages=['settrie'],
