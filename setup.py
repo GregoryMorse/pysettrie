@@ -31,5 +31,8 @@ setup(
     ext_modules = cythonize([
         Extension("settrie", ["settrie/settrie.pyx"])],
         language_level=3
-    ) #"settrie.pyx"),
+    ), #"settrie.pyx")
+    package_data = {
+        'settrie': ['settrie.pxd','settrie.pyx'],
+    },
 )
