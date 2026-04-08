@@ -26,13 +26,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install build dependencies
-        run: pip install --upgrade pip setuptools wheel Cython numpy
+        run: pip install --upgrade pip setuptools wheel Cython numpy pytest
 
       - name: Install package (builds Cython extension)
-        run: pip install -e .
-
-      - name: Install test dependencies
-        run: pip install pytest
+        run: pip install .
 
       - name: Run tests
         run: pytest -v tests/
