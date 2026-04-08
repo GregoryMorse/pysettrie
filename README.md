@@ -1,5 +1,6 @@
 # pysettrie
 
+[![CI](https://github.com/GregoryMorse/pysettrie/actions/workflows/ci.yml/badge.svg)](https://github.com/GregoryMorse/pysettrie/actions/workflows/ci.yml)
 [![PyPI version](https://badge.fury.io/py/pysettrie.svg)](https://pypi.org/project/pysettrie/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysettrie)](https://pypi.org/project/pysettrie/)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
