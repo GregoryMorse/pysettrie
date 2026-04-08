@@ -113,6 +113,9 @@ python -m pytest tests/
 
 ## Changelog
 
+### Version 1.0.3
+- Switch to GitHub Actions CI; update README and badges.
+
 ### Version 1.0.2
 - Continuous integration, remove unnecessary files, improve build requirements.
 

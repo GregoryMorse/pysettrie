@@ -89,6 +89,9 @@ from cpython.mem cimport PyMem_Malloc, PyMem_Free
 from cython.operator cimport dereference as deref, preincrement as inc
 cdef extern from *:
     """
+    #ifdef _MSC_VER
+    #pragma warning(disable: 4551)
+    #endif
     """
 
 ctypedef void* Void_ptr
@@ -98,7 +101,7 @@ cdef size_t node_hashfunc(const Node_ptr& s):
     return hash(<object>s.data)
 ctypedef bool(*node_eq)(const Node_ptr& lhs, const Node_ptr& rhs)
 cdef bool node_equal(const Node_ptr& lhs, const Node_ptr& rhs):
-    return <object>lhs.data == <object>rhs.data
+    return <bool>(<object>lhs.data == <object>rhs.data)
 
 ctypedef unordered_set[Node_ptr, node_hash, node_eq] node_unordered_set
 ctypedef unordered_set[Node_ptr, node_hash, node_eq].iterator node_unordered_set_it
@@ -121,7 +124,7 @@ cdef node_unordered_set intersection(node_unordered_set s1, node_unordered_set s
 
 ctypedef bool(*node_comp)(const Node_ptr& lhs, const Node_ptr& rhs)
 cdef bool node_comparator(const Node_ptr& lhs, const Node_ptr& rhs):
-    return <object>lhs.data < <object>rhs.data
+    return <bool>(<object>lhs.data < <object>rhs.data)
 ctypedef set[Node_ptr, node_comp] node_set
 ctypedef set[Node_ptr, node_comp].iterator node_set_it
 ctypedef set[Node_ptr, node_comp].reverse_iterator node_set_rev_it
